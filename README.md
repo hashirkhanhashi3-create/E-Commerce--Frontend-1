@@ -389,8 +389,3 @@ This project is delivered as a client work product. All rights are transferred t
 ---
 
 *Built with care. Designed to sell.*
-<p align="center">
-  <img src="screenshots/home.png" width="45%">
-  <img src="screenshots/cart.png" width="45%">
-</p>
-
