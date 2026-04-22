@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXE — Premium Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">LUXE</div>
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="#shop" class="nav-link" data-section="shop">Shop</a>
+      <a href="#collections" class="nav-link" data-section="collections">Collections</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+    </nav>
+    <div class="nav-right">
+      <!-- Wishlist Button -->
+      <button class="wishlist-btn" id="wishlistToggle" aria-label="Open wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+        <span class="wishlist-count" id="wishlistCount" aria-label="Wishlist items">0</span>
+      </button>
+      <!-- Cart Button -->
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount" aria-label="Cart items">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+    <a href="#shop" class="mobile-nav-link" data-section="shop">Shop</a>
+    <a href="#collections" class="mobile-nav-link" data-section="collections">Collections</a>
+    <a href="#about" class="mobile-nav-link" data-section="about">About</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero banner">
+    <div class="hero-text">
+      <span class="hero-eyebrow">New Arrivals 2026</span>
+      <h1 class="hero-title">Crafted for<br><em>Those Who Know</em></h1>
+      <p class="hero-sub">Curated essentials. Timeless quality.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="hero-cta">Explore Collection</a>
+        <a href="#about" class="hero-link">Our Story ↓</a>
+      </div>
+    </div>
+    <div class="hero-decor" aria-hidden="true">
+      <div class="decor-circle c1"></div>
+      <div class="decor-circle c2"></div>
+      <div class="decor-circle c3"></div>
+    </div>
+    <div class="hero-stats" aria-label="Store highlights">
+      <div class="hero-stat"><span class="stat-num">12+</span><span class="stat-label">Curated Items</span></div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat"><span class="stat-num">4.8★</span><span class="stat-label">Avg Rating</span></div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat"><span class="stat-num">Free</span><span class="stat-label">Shipping</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       COLLECTIONS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="collections-section" id="collections" aria-label="Collections">
+    <div class="section-header">
+      <span class="section-eyebrow">Curated For You</span>
+      <h2 class="section-title">Our Collections</h2>
+      <p class="section-sub">Explore our carefully curated categories, each a world of its own.</p>
+    </div>
+    <div class="collections-grid">
+      <div class="collection-card" data-filter="clothing" role="button" tabindex="0" aria-label="Browse Clothing collection">
+        <div class="collection-visual">
+          <img src="aviv-rachmadian-7F7kEHj72MQ-unsplash.jpg" alt="Clothing" class="collection-image">
+          <div class="collection-overlay">
+            <span class="collection-cta-text">Shop Now →</span>
+          </div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Clothing</h3>
+          <p class="collection-desc">Silk blazers, wool coats, merino knitwear — refined essentials for every season.</p>
+          <span class="collection-count" data-category="clothing">4 pieces</span>
+        </div>
+      </div>
+
+      <div class="collection-card" data-filter="accessories" role="button" tabindex="0" aria-label="Browse Accessories collection">
+        <div class="collection-visual">
+          <img src="martin-de-arriba-uf_IDewI6iQ-unsplash.jpg" alt="Accessories" class="collection-image">
+          <div class="collection-overlay">
+            <span class="collection-cta-text">Shop Now →</span>
+          </div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Accessories</h3>
+          <p class="collection-desc">Sculptural jewellery and polarized eyewear that completes every look.</p>
+          <span class="collection-count" data-category="accessories">2 pieces</span>
+        </div>
+      </div>
+
+      <div class="collection-card" data-filter="footwear" role="button" tabindex="0" aria-label="Browse Footwear collection">
+        <div class="collection-visual">
+          <img src="rohit-sharma-FZPBDun6FKY-unsplash.jpg" alt="Footwear" class="collection-image">
+          <div class="collection-overlay">
+            <span class="collection-cta-text">Shop Now →</span>
+          </div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Footwear</h3>
+          <p class="collection-desc">Suede Chelseas, calfskin derbies, and canvas icons — built to last.</p>
+          <span class="collection-count" data-category="footwear">3 pieces</span>
+        </div>
+      </div>
+
+      <div class="collection-card" data-filter="bags" role="button" tabindex="0" aria-label="Browse Bags collection">
+        <div class="collection-visual">
+          <img src="aylin-cobanoglu-5A9cFNtWav0-unsplash.jpg" alt="Bags" class="collection-image">
+          <div class="collection-overlay">
+            <span class="collection-cta-text">Shop Now →</span>
+          </div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Bags</h3>
+          <p class="collection-desc">Italian leather totes, raffia clutches, and waxed canvas weekenders.</p>
+          <span class="collection-count" data-category="bags">3 pieces</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SHOP SECTION — FILTER + PRODUCTS
+  ═══════════════════════════════════════ -->
+  <section class="shop-section" id="shop" aria-label="Shop">
+    <div class="section-header">
+      <span class="section-eyebrow">Browse Everything</span>
+      <h2 class="section-title">The Store</h2>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-section" id="filterBar" role="search" aria-label="Filter and sort products">
+      <div class="filter-wrapper">
+        <span class="filter-label" aria-hidden="true">Filter:</span>
+        <div class="filter-pills" role="group" aria-label="Category filters">
+          <button class="pill active" data-filter="all" aria-pressed="true">All</button>
+          <button class="pill" data-filter="clothing" aria-pressed="false">Clothing</button>
+          <button class="pill" data-filter="accessories" aria-pressed="false">Accessories</button>
+          <button class="pill" data-filter="footwear" aria-pressed="false">Footwear</button>
+          <button class="pill" data-filter="bags" aria-pressed="false">Bags</button>
+        </div>
+        <div class="sort-wrapper">
+          <label for="sortSelect" class="sr-only">Sort products</label>
+          <select class="sort-select" id="sortSelect" aria-label="Sort products">
+            <option value="default">Sort: Featured</option>
+            <option value="low">Price: Low → High</option>
+            <option value="high">Price: High → Low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-section">
+      <div class="product-grid" id="productGrid" role="list" aria-label="Products">
+        <!-- Products injected by JS -->
+      </div>
+      <p class="no-results hidden" id="noResults" role="status" aria-live="polite">No products found in this category.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════ -->
+  <section class="about-section" id="about" aria-label="About LUXE">
+    <div class="about-inner">
+      <div class="about-content">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="about-title">Built on the Belief That Quality Endures</h2>
+        <p class="about-lead">LUXE was founded in 2020 with a single conviction: that the most meaningful things you own should be made to last a lifetime — not a season.</p>
+        <p class="about-body">We work directly with artisans across Italy, Japan, and the UK. Every piece in our store passes through hands that have spent decades mastering a single craft. No middlemen. No fast fashion. Just the finest materials, shaped with intention.</p>
+        <p class="about-body">Our curation process is ruthless. For every item we carry, we've turned down dozens. We look for provenance, durability, and that rare quality that makes an object feel inevitable — like it couldn't have been made any other way.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>Ethically Sourced</strong>
+              <p>Every supplier is vetted for fair labour and sustainable practices.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>Free Global Shipping</strong>
+              <p>All orders ship free, worldwide. No minimum. No catches.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>30-Day Returns</strong>
+              <p>Not happy? Send it back, no questions asked, within 30 days.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#shop" class="hero-cta about-cta">Shop the Collection</a>
+      </div>
+      <div class="about-visual" aria-hidden="true">
+        <div class="about-card-stack">
+          <div class="about-card ac1">
+            <span class="ac-emoji">🧥</span>
+            <span class="ac-label">Silk Wrap Blazer</span>
+            <span class="ac-origin">Made in Japan</span>
+          </div>
+          <div class="about-card ac2">
+            <span class="ac-emoji">👜</span>
+            <span class="ac-label">Saddle Tote</span>
+            <span class="ac-origin">Made in Italy</span>
+          </div>
+          <div class="about-card ac3">
+            <span class="ac-emoji">👢</span>
+            <span class="ac-label">Suede Chelsea</span>
+            <span class="ac-origin">Made in England</span>
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="badge-num">2020</span>
+          <span class="badge-text">Est.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TOAST NOTIFICATION
+  ═══════════════════════════════════════ -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span id="toastMsg">Added to cart!</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CART SIDEBAR
+  ═══════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <h2 class="cart-title">Your Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems" aria-label="Cart items"></div>
+    <div class="cart-empty hidden" id="cartEmpty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <p>Your cart is empty</p>
+      <span>Add some items to get started</span>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-shipping">
+        <span>Shipping</span>
+        <span class="free-tag">Free</span>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+      <button class="clear-cart-btn" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════
+       WISHLIST SIDEBAR
+  ═══════════════════════════════════════ -->
+  <div class="wishlist-overlay" id="wishlistOverlay" aria-hidden="true"></div>
+  <aside class="wishlist-sidebar" id="wishlistSidebar" aria-label="Wishlist" aria-hidden="true">
+    <div class="cart-header">
+      <h2 class="cart-title">Wishlist</h2>
+      <button class="cart-close" id="wishlistClose" aria-label="Close wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="wishlistItems" aria-label="Wishlist items"></div>
+    <div class="cart-empty hidden" id="wishlistEmpty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+      </svg>
+      <p>Your wishlist is empty</p>
+      <span>Heart items you love to save them here</span>
+    </div>
+    <div class="wishlist-footer" id="wishlistFooter">
+      <button class="checkout-btn" id="addAllToCartBtn">Add All to Cart</button>
+      <button class="clear-cart-btn" id="clearWishlistBtn">Clear Wishlist</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════
+       CHECKOUT MODAL
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="checkoutModal">
+      <button class="modal-close" id="modalClose" aria-label="Close confirmation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h2 class="modal-title" id="modalTitle">Order Confirmed!</h2>
+      <p class="modal-msg">Thank you for your purchase. Your order is being prepared and will be shipped shortly.</p>
+      <div class="modal-order-id" id="modalOrderId" aria-label="Order number"></div>
+      <button class="modal-btn" id="modalBtn">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">LUXE</span>
+        <p>Premium essentials, delivered.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <h4>Navigate</h4>
+          <a href="#shop">Shop</a>
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">Returns</a>
+          <a href="#">FAQ</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 LUXE Store. All rights reserved.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🔒 Secure Checkout</span>
+        <span class="footer-badge">🚚 Free Shipping</span>
+        <span class="footer-badge">↩ 30-Day Returns</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
